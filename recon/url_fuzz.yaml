@@ -1,0 +1,12 @@
+title: Web URL Fuzzer
+description: Find subdirectories not linked using a wordlist
+command: wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 https://domain.com
+function: |
+  function ctf_fuzz_web_subdirectories() {
+    $(which wfuzz) -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 "$1"
+  }
+params:
+  - -c -- Colored output
+  - -z -- Payload (type,parameter)
+  - -hc -- Hide responses with specific codes (-hw for specific words) (-hl for specific line counts)
+tags: [web, url, subdomain, subdirectory, fuzz, bruteforce, wordlist, site, domain, uri, find, discovery, recon]
