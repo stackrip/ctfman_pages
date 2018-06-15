@@ -1,0 +1,12 @@
+title: Host Discovery 
+description: Ping scan hosts and determine if they're up.
+command: nmap -sn -v -PS22,80,443,3389,8080,9999 1.1.1.1/24
+function: |
+  function ctf_discover_hosts() {
+    $(which nmap) -v -sn -PS22,80,443,3389,8080,9999 "$1"
+  }
+params:
+  - -sn -- Ping scan
+  - -v -- Verbose
+  - -PS<ports> -- Check specific ports 22,50 or port ranges 80-8888
+tags: [ping, scan, ip, host, discovery, nmap, up, online, recon]

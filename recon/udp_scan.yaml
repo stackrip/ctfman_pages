@@ -1,0 +1,13 @@
+title: Host UDP Scan
+description: Scan a host or hosts to find all open UDP ports (slow)
+command: nmap -sU -v -A -p1-600 1.1.1.1
+function: |
+  function ctf_tcp_scan() {
+    $(which nmap) -sU -v -A -p "$2" "$1"
+  }
+params:
+  - -sU -- Perform UDP scan
+  - -p -- Specify port range
+  - -v -- Verbose
+  - -A -- Extra detection (OS)
+tags: [nmap, ip, udp, scan, port, discovery, open]
