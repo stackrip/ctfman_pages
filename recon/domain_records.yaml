@@ -1,0 +1,12 @@
+title: List Domain Records
+description: Use dig (domain information grouper) to list all records associated with a domain name.
+command: dig +nocmd domain.com ANY +multiline +noall +answer
+function: |
+  function ctf_dns_records() {
+    $(which dig) +nocmd "$1" ANY +multiline +noall +answer
+  }
+params:
+  - (ALL|A|TXT|NS|MX) -- Request specific records back from the NS
+  - +short -- Remove all verbosity and just output IPs.
+  - TTL - Get ttl records for a domain
+tags: [dns, record, domain, profile, dig, txt, mx, ns, host, url, recon]

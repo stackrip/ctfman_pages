@@ -1,0 +1,12 @@
+title: DNS Reverse Domain Lookup from IP
+description: Use DIG to determine the domain name(s) associated with an IP (high failure rate).
+command: dig +noall +answer -x 1.1.1.1
+function: |
+  function ctf_dns_reverse_lookup() {
+    $(which dig) +noall +answer -x "$1"
+  }
+params:
+  - -x -- reverse lookup an IP
+  - +noall -- Clear display flags
+  - +answer -- Display the answer section
+tags: [dns, record, domain, reverse, ip, lookup recon]
