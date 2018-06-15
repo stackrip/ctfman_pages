@@ -1,0 +1,12 @@
+title: DNS Subdomain Enumeration
+description: 
+command:  dnsmap domain.com -w wordlist.txt
+function: |
+  function ctf_dns_subdomain_enumeration() {
+    curl -L "https://pastebin.com/raw/vksDmYKc" > /tmp/dnswl.txt
+    $(which dnsmap) "$1" -w /tmp/dnswl.txt
+  }
+params:
+  - -i 1.1.1.1 -- useful if you're obtaining false positives
+  - -r file.txt -- Write results to file
+tags: [dns, subdomain, enumeration, hostname, ns, dnsmap]
