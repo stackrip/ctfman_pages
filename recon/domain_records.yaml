@@ -2,7 +2,7 @@ title: List Domain Records
 description: Use dig (domain information grouper) to list all records associated with a domain name.
 command: dig +nocmd domain.com ANY +multiline +noall +answer
 function: |
-  function ctf_dns_records() {
+  function ctfman_dns_records() {
     $(which dig) +nocmd "$1" ANY +multiline +noall +answer
   }
 params:
