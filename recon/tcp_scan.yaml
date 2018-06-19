@@ -2,7 +2,7 @@ title: Host TCP Scan
 description: Scan a host or hosts to find all open TCP ports
 command: nmap -sS -v -A 1.1.1.1
 function: |
-  function ctf_tcp_scan() {
+  function ctfman_tcp_scan() {
     $(which nmap) -sS -v -A "$1"
   }
 params:
