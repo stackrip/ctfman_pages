@@ -2,7 +2,7 @@ title: Host Discovery
 description: Ping scan hosts and determine if they're up.
 command: nmap -sn -v -PS22,80,443,3389,8080,9999 1.1.1.1/24
 function: |
-  function ctf_discover_hosts() {
+  function ctfman_discover_hosts() {
     $(which nmap) -v -sn -PS22,80,443,3389,8080,9999 "$1"
   }
 params:
