@@ -1,4 +1,13 @@
 title: Google Dorking - indexof
 description: finds directory listings at domains using Google.
 command: intitle:"index of"
+function: function ctfman_google_dork_indexof() {
+  if [[ `uname` == 'Linux' ]]; then
+    gnome-open "https://encrypted.google.com/search?q=intitle:\"index of\" $1"
+  elif [[ `uname` == 'Darwin' ]]; then
+    open "https://encrypted.google.com/search?q=intitle:\"index of\" $1"
+  else
+    echo "Unknown browser. Please head to https://encrypted.google.com/search?q=intitle:\"index of\""
+  fi
+}
 tags: [web, google, site, domain, find, discovery, recon]
