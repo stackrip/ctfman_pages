@@ -1,0 +1,4 @@
+title: Google Dorking - indexof
+description: finds directory listings at domains using Google.
+command: intitle:"index of"
+tags: [web, google, site, domain, find, discovery, recon]
