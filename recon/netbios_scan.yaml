@@ -1,4 +1,4 @@
-title: Host TCP Scan
+title: Netbios Scan
 description: Scan a host or hosts to find NetBIOS/Bonjour name.
 command: nmap -sU -p 137,5353 --script nbstat,dns-service-discovery [target]
 function: |
