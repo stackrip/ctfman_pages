@@ -1,0 +1,12 @@
+title: Host TCP Scan
+description: Scan a host or hosts to find NetBIOS/Bonjour name.
+command: nmap -sU -p 137,5353 --script nbstat,dns-service-discovery [target]
+function: |
+  function ctfman_netbios_scan() {
+    $(which nmap) -sU -p 137,5353 --script nbstat,dns-service-discovery "$1"
+  }
+params:
+  - -sU -- UDP scan
+  - -p -- Ports for NetBIOS/Bonjour
+  - --script -- use bundled nmap scripts
+tags: [nmap, ip, udp, scan, port, discovery, open, netbios, bonjour, hostname]
