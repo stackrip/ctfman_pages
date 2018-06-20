@@ -10,4 +10,4 @@ function: function ctfman_google_dork_indexof() {
     echo "Unknown browser. Please head to https://encrypted.google.com/search?q=intitle:\"index of\""
   fi
 }
-tags: [web, google, site, domain, find, discovery, recon]
+tags: [web, google, site, domain, find, discovery, recon, dork, search, engine, index, of]
