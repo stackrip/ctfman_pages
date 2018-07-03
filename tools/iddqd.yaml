@@ -1,0 +1,13 @@
+title: IDDQD
+description: Run a Docker container with noVNC and Zandronum.
+command: docker run -it --rm -v /path/to/wads/:/wads -p 8080:8080 frozenfoxx/zandronum:latest
+function: |
+  function ctfman_iddqd() {
+    $(which docker) run -it --rm -v "$1":/wads -p 8080:8080 frozenfoxx/zandronum:latest
+  }
+params:
+  - -v -- volume mount for WADs
+  - -it -- interactive and terminal
+  - -p <source>:<target> -- ports to forward from the host
+  - :latest -- latest standard version of the container
+tags: [cheatcode, doom, container, docker, iddqd, zandronum]
