@@ -1,0 +1,11 @@
+title: Simple TCP Server
+description: Use netcat to open a simple tcp server to catch shells, text, exfiltrated data, etc. If you intend to use this on a port below 1024 (i.e. port 80,443) you will need to run it as root.
+command: nc -k -l 8080
+function: |
+  function ctfman_tcp_server() {
+    $(which nc) -k -l "$1"
+  }
+params:
+  - -k -- Forces nc to stay listening for another connection after its current connection is completed
+  - -l -- Listen on <port>
+tags: [listen, nc, netcat, tcp, server, exfiltrate, catch]
