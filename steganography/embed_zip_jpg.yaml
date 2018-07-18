@@ -1,0 +1,10 @@
+title: Embed a ZIP file within a JPEG
+description: Use cat to embed a ZIP file within a JPEG image.
+command: cat original.jpg contents.zip > encrypted.jpg
+function: |
+  function embed_zip_jpg() {
+    $(which cat) "$1" "$2" > "$3"
+  }
+params:
+
+tags: [steganography, compression, image]
