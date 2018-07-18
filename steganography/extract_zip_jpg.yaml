@@ -1,0 +1,10 @@
+title: Extract a ZIP file from within a JPEG
+description: Use unzip to extract a ZIP file from within a JPEG image.
+command: unzip target.jpg
+function: |
+  function extract_zip_jpg() {
+    $(which unzip) "$1"
+  }
+params:
+
+tags: [steganography, compression, image]
