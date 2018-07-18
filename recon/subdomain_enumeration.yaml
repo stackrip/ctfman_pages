@@ -1,5 +1,5 @@
 title: DNS Subdomain Enumeration
-description: 
+description: Find valid subdomains from a wordlist for a given domain name
 command:  dnsmap domain.com -w wordlist.txt
 function: |
   function ctfman_dns_subdomain_enumeration() {

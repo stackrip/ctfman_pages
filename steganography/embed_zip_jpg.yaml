@@ -6,5 +6,6 @@ function: |
     $(which cat) "$1" "$2" > "$3"
   }
 params:
+  - No params! See `man cat` for more info.
 
 tags: [steganography, compression, image]
