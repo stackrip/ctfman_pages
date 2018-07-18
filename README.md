@@ -8,3 +8,7 @@ If you have a good CTF one-liner to add to the reference, throw it in here and m
  * *recon* - Recon & Enumeration - Information gathering about a basic system.
  * *steganography* - Steganography - Analysis, embedding, and extraction techniques for hidden information in files.
  * *tools* - Tools - Installation, configuration, and usage of software for CTFs.
+ * *post_exploitation* - Post Recon/Enumeration Techniques - System level information gathering & exploitation
+ * *linux* - GNU/Linux - Linux specific tools & techniques
+ * *windows* - Microsoft Windows - Windows specific tools & techniques
+ * *cracking* - Password / key cracking - Get that password / decode that message
