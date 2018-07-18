@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: stackrip/ctfman-pages-lint
+    working_directory: /opt/ctfman_pages
+
+    steps:
+      - checkout
+      - run:
+          name: lint files
+          command: lint_ctfman
