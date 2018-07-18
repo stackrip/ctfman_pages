@@ -1,4 +1,7 @@
 # [CTFMan Pages](https://ctf.stackrip.com)
+[![CircleCI](https://img.shields.io/circleci/project/github/stackrip/ctfman_pages.svg?style=for-the-badge)](https://circleci.com/gh/stackrip/ctfman_pages)  
+[![forthebadge](https://forthebadge.com/images/badges/compatibility-club-penguin.svg)](https://stackrip.com)  
+  
 Yaml pages used by CTFMan: the searchable  CTF one-liners reference. Find the searchable reference [here](https://ctf.stackrip.com).
 
 ## Contributing
