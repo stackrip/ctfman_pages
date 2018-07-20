@@ -1,0 +1,11 @@
+title: crack sha256 hash
+description: Use hashcat to crack a SHA256 hash with a mask that matches [A-Z][a-z][0-9][0-9][\?%$@#\^\*\(\)\[\];:].
+command: hashcat64.bin -m 1400 -a 3 'hashGoesHere' ?u?l?d?d?s
+function: |
+  function ctfman_crack_sha256_hash() {
+    $(which hashcat64.bin) -m 1400 -a 3 "$1" ?u?l?d?d?s
+  }
+params:
+  - -m -- Sets the hash mode
+  - -a -- Sets the attack mode
+tags: [sha, hashcat, hash, mask]
