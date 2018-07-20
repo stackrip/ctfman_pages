@@ -6,6 +6,6 @@ function: |
     $(which hashcat64.bin) -m 1400 -a 3 "$1" ?u?l?d?d?s
   }
 params:
-  - -m 1400 -- Sets the hash mode to "Hash: SHA256"
+  - "-m 1400 -- Sets the hash mode to \"Hash: SHA256\""
   - -a 3 -- Sets the attack mode to "mask"
 tags: [sha, hashcat, hash, mask]
