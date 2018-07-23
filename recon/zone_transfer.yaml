@@ -7,6 +7,6 @@ function: |
   }
 params:
   - axfr -- initiate a zone transfer
-  - '@dnsserver' -- DNS server to request
+  - dnsserver -- DNS server to request
   - domain.name -- target domain to retrieve records on
 tags: [dns, record, domain, axfr, dig, transfer, reverse, url, recon]
