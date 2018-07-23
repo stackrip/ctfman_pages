@@ -1,0 +1,12 @@
+title: DNS Zone Transfer
+description: Use dig (domain information grouper) to request a zone transfer.
+command: dig axfr @dnsserver domain.name
+function: |
+  function ctfman_zone_transfer() {
+    $(which dig) axfr "@$1" "$2"
+  }
+params:
+  - axfr -- initiate a zone transfer
+  - @(dnsserver) -- DNS server to request
+  - domain.name -- target domain to retrieve records on
+tags: [dns, record, domain, axfr, dig, transfer, reverse, url, recon]
