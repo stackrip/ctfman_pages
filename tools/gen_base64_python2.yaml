@@ -1,0 +1,11 @@
+title: Generate base64 string (python2)
+description: Generate a random string encoded to base64 using Python 2.
+command: python -c 'import base64; import os; print(base64.encodestring(os.urandom(32)))'
+function: |
+  function ctfman_gen_base64_python2() {
+    $(which python) -c "import base64; import os; print(base64.encodestring(os.urandom($1)))"
+  }
+params:
+  - -c -- execute inline Python code
+
+tags: [python, python2, base64, strings, encode]
