@@ -1,0 +1,12 @@
+title: Generate base64 string (OpenSSL)
+description: Generate a random string encoded to base64 using OpenSSL.
+command: openssl rand -base64 32
+function: |
+  function ctfman_gen_base64_openssl() {
+    $(which openssl) rand -base64 $1
+  }
+params:
+  - rand -- randomize
+  - -base64 -- use base64
+
+tags: [openssl, base64, strings, encode]
