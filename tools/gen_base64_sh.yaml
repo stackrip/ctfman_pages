@@ -1,0 +1,12 @@
+title: Generate base64 string (POSIX/Bash)
+description: Generate a random string encoded to base64 using POSIX or Bash shell tools.
+command: echo $(tr -cd '[:alnum:]' < /dev/urandom | fold -w32 | head -n1)=
+function: |
+  function ctfman_gen_base64_sh() {
+    echo $(tr -cd '[:alnum:]' < /dev/urandom | fold -w$1 | head -n1)=
+  }
+params:
+  - -w -- width or number of characters
+  - -n1 -- pull the first result
+
+tags: [bash, tr, shell, sh, base64, random, strings, encode]
